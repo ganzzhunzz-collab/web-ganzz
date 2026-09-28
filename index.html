@@ -1,0 +1,282 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Ahmad Gani - Ocean</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(
+                to bottom,
+                #001f3f,
+                #003566,
+                #0077b6,
+                #00b4d8
+            );
+            color: white;
+        }
+
+        /* Matahari */
+        .sun {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #ffd166;
+            border-radius: 50%;
+            top: 60px;
+            right: 100px;
+            box-shadow: 0 0 40px #ffd166;
+        }
+
+        /* Container utama */
+        .container {
+            position: relative;
+            z-index: 5;
+            width: 420px;
+            margin: 60px auto;
+            padding: 30px;
+            background: rgba(0, 31, 63, 0.75);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Foto */
+        .foto {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #90e0ef;
+            box-shadow: 0 0 25px #00b4d8;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: #90e0ef;
+            text-shadow: 0 0 15px #00b4d8;
+        }
+
+        .subtitle {
+            margin-top: 5px;
+            margin-bottom: 25px;
+            color: #caf0f8;
+        }
+
+        /* Biodata */
+        .biodata {
+            text-align: left;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .biodata p {
+            margin: 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .label {
+            color: #90e0ef;
+            font-weight: bold;
+        }
+
+        .motto {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            background: rgba(0,180,216,0.25);
+            color: #caf0f8;
+            font-style: italic;
+        }
+
+        /* Gelembung */
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            animation: naik 8s infinite ease-in;
+        }
+
+        .b1 {
+            width: 25px;
+            height: 25px;
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .b2 {
+            width: 15px;
+            height: 15px;
+            left: 30%;
+            animation-delay: 3s;
+        }
+
+        .b3 {
+            width: 35px;
+            height: 35px;
+            left: 70%;
+            animation-delay: 2s;
+        }
+
+        .b4 {
+            width: 20px;
+            height: 20px;
+            left: 85%;
+            animation-delay: 4s;
+        }
+
+        @keyframes naik {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Ombak */
+        .wave {
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+            width: 200%;
+            height: 180px;
+            background: #023e8a;
+            border-radius: 50% 50% 0 0;
+            animation: ombak 6s infinite ease-in-out;
+        }
+
+        .wave2 {
+            bottom: -110px;
+            background: #0077b6;
+            animation-duration: 8s;
+            opacity: 0.8;
+        }
+
+        @keyframes ombak {
+            0%, 100% {
+                transform: translateX(-5%);
+            }
+
+            50% {
+                transform: translateX(-25%);
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #ade8f4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Matahari -->
+    <div class="sun"></div>
+
+    <!-- Gelembung -->
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+
+    <!-- Biodata -->
+    <div class="container">
+
+        <!-- Ganti foto.jpg dengan foto kamu -->
+        <img src="foto.jpg" alt="Foto Ahmad Gani" class="foto">
+
+        <h1>Ahmad Gani 🌊</h1>
+
+        <p class="subtitle">
+            Ocean Profile | Network Engineer
+        </p>
+
+        <div class="biodata">
+
+            <p>
+                <span class="label">👤 Nama:</span>
+                Ahmad Gani
+            </p>
+
+            <p>
+                <span class="label">🏫 Sekolah:</span>
+                SMK Taruna Bhakti
+            </p>
+
+            <p>
+                <span class="label">📚 Kelas:</span>
+                XI TKJ 4
+            </p>
+
+            <p>
+                <span class="label">💻 Jurusan:</span>
+                TJKT / TKJ
+            </p>
+
+            <p>
+                <span class="label">📍 Tempat Lahir:</span>
+                Jakarta
+            </p>
+
+            <p>
+                <span class="label">🎂 Tanggal Lahir:</span>
+                02 April 2010
+            </p>
+
+            <p>
+                <span class="label">🎮 Hobi:</span>
+                Gaming
+            </p>
+
+            <p>
+                <span class="label">🌐 Cita-Cita:</span>
+                Network Engineer
+            </p>
+
+        </div>
+
+        <div class="motto">
+            🌊 "Seperti lautan, terus bergerak,
+            terus belajar, dan terus menjadi lebih baik."
+        </div>
+
+        <div class="footer">
+            © 2026 Ahmad Gani | Ocean Profile
+        </div>
+
+    </div>
+
+    <!-- Ombak -->
+    <div class="wave"></div>
+    <div class="wave wave2"></div>
+
+</body>
+</html>
+```
